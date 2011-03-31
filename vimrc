@@ -3,6 +3,7 @@ source $VIMRUNTIME/vimrc_example.vim
 
 syntax on
 colorscheme void
+
 set bsdir=buffer
 set acd
 set nu
@@ -30,7 +31,10 @@ set noswf
 set nowrap
 set wim=list:longest
 
+set showcmd
+set cmdheight=2
 set encoding=utf-8
+call pathogen#runtime_append_all_bundles()
 
 set go-=T
 filetype plugin on
@@ -48,5 +52,5 @@ nmap ,ev :tabedit $MYVIMRC<cr>
 nmap ,nt :NERDTreeToggle
 
 let NERDTreeShowHidden=1
-let g:event_handler_attributes_complete = 0
-let g:rdfa_attributes_complete = 0
+let g:event_handler_attributes_complete=0
+let g:rdfa_attributes_complete=0
