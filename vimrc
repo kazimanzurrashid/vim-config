@@ -2,7 +2,7 @@ set nocompatible
 source $VIMRUNTIME/vimrc_example.vim
 
 syntax on
-colorscheme void
+colorscheme zenburn
 
 set bsdir=buffer
 set acd
