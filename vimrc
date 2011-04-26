@@ -1,6 +1,7 @@
 set nocompatible
 source $VIMRUNTIME/vimrc_example.vim
 
+let g:zenburn_high_Contrast=1
 syntax on
 colorscheme zenburn
 
