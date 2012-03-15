@@ -36,13 +36,13 @@ set viewoptions=folds,options,cursor,unix,slash
 set wildmenu
 set wildmode=longest,list
 
-if has("gui_running")
+if has('gui_running')
   set background=dark
   colorscheme solarized
   let g:solarized_termtrans=1
   let g:solarized_termcolors=256
-  let g:solarized_contrast="high"
-  let g:solarized_visibility="high"
+  let g:solarized_contrast='high'
+  let g:solarized_visibility='high'
 else
   colorscheme zenburn
   let g:zenburn_high_Contrast=1
@@ -61,7 +61,7 @@ set title
 
 filetype plugin indent on
 
-if &t_Co > 2 || has("gui_running")
+if &t_Co > 2 || has('gui_running')
   set hlsearch
 endif
 
@@ -91,7 +91,7 @@ else
   "set term=builtin_ansi
 endif
 
-if has("autocmd")
+if has('autocmd')
   autocmd BufEnter * cd %:p:h
 endif
 
