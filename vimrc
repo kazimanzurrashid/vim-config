@@ -81,10 +81,10 @@ if has('gui_running')
   set guioptions-=r
   set columns=120
   set lines=40
-  if has('gui_macvim') || has('win32')
+  if has('gui_macvim')
     set guifont=Monaco:h15
     set transparency=5
-  elseif has('win32')
+  elseif has('win64') || has('win32')
     set guifont=Consolas:h10
   endif
 else
