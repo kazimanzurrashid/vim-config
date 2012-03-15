@@ -84,7 +84,7 @@ if has('gui_running')
   if has('gui_macvim') || has('win32')
     set guifont=Monaco:h15
     set transparency=5
-  else if has('win32')
+  elseif has('win32')
     set guifont=Consolas:h10
   endif
 else
