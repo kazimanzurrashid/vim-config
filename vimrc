@@ -1,66 +1,99 @@
 set nocompatible
-source $VIMRUNTIME/vimrc_example.vim
 
-let g:zenburn_high_Contrast=1
-syntax on
-colorscheme zenburn
+call pathogen#infect()
+call pathogen#helptags()
 
+scriptencoding utf-8
+syntax enable
+
+set autoindent
+set autoread
+set backspace=indent,eol,start
 set bsdir=buffer
-set acd
-set nu
-set hls
-set spell
-set spl=en
-set sps=best
-set ls=2
-set hid
-set spr
-set title
-set lsp=2
-set nocf
-set ru
-set ts=4
-set sw=4
-set sts=4
 set expandtab
-set sta
-set ai
-set si
-set fen
-set nobk
-set noswf
-set nowrap
-set wim=list:longest
-
-set showcmd
-set cmdheight=2
-set encoding=utf-8
-call pathogen#runtime_append_all_bundles()
-
-filetype plugin on
-filetype indent on
-autocmd BufEnter * cd %:p:h
-
-if has("autocmd")
-    autocmd FileType yaml setlocal ts=2 sts=2 sw=2 
-    autocmd FileType html setlocal ts=2 sts=2 sw=2
-    autocmd FileType css setlocal ts=2 sts=2 sw=2 
-    autocmd FileType javascript setlocal ts=4 sts=4 sw=4 noexpandtab
+set foldenable
+set hidden
+set history=64
+set incsearch
+set ignorecase
+if has('mouse')
+  set mouse=a
 endif
+set nobackup
+set noswapfile
+set nowrap
+set noerrorbells visualbell t_vb=
+set scrolljump=5
+set scrolloff=3
+set shiftwidth=2
+set smartcase
+set smartindent
+set spell
+set sps=best,10
+set softtabstop=2
+set tabstop=2
+set viewoptions=folds,options,cursor,unix,slash
+set wildmenu
+set wildmode=longest,list
 
 if has("gui_running")
-	set go-=T
-	set lines=30
-	set columns=128
-	set cursorline
+  set background=dark
+  colorscheme solarized
+  let g:solarized_termtrans=1
+  let g:solarized_termcolors=256
+  let g:solarized_contrast="high"
+  let g:solarized_visibility="high"
+else
+  colorscheme zenburn
+  let g:zenburn_high_Contrast=1
 endif
 
-set guioptions-=L
-set guioptions-=r
+set cmdheight=2
+set cursorline
+set listchars=tab:▸\ ,eol:¬
+set number
+set ruler
+set showcmd
+set showmatch
+set list
+set listchars=tab:,.,trail:.,extends:#,nbsp:.
+set title
 
-nmap ,ev :tabedit $MYVIMRC<cr>
-nmap ,nt :NERDTreeToggle
+filetype plugin indent on
+
+if &t_Co > 2 || has("gui_running")
+  set hlsearch
+endif
+
+if has('statusline')
+  set laststatus=2
+  set statusline=%<%f\
+  set statusline+=%w%h%m%r
+  set statusline+=%{fugitive#statusline()}
+  set statusline+=\ [%{&ff}/%Y]
+  set statusline+=\ [%{getcwd()}]
+  set statusline+=%=%-14.(%l,%c%V%)\ %p%%
+endif
+
+if has('gui_running')
+  set guioptions-=T
+  set guioptions-=L
+  set guioptions-=r
+  set columns=120
+  set lines=40
+  set guifont=Monaco:h15,Andale\ Mono\ Regular:h16,Menlo\ Regular:h15,Consolas\ Regular:h15,Courier\ New\ Regular:h18
+  if has('gui_macvim')
+    set transparency=5
+  endif
+else
+  "set term=builtin_ansi
+endif
+
+if has("autocmd")
+  autocmd BufEnter * cd %:p:h
+endif
 
 let NERDTreeShowHidden=1
-let g:event_handler_attributes_complete=0
-let g:rdfa_attributes_complete=0
+let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
+
+nmap ,nt :NERDTreeToggle
