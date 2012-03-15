@@ -82,10 +82,10 @@ if has('gui_running')
   set columns=120
   set lines=40
   if has('gui_macvim') || has('win32')
-    set guifont=Monaco:h15,Andale\ Mono\ Regular:h16,Menlo\ Regular:h15,Consolas\ Regular:h15,Courier\ New\ Regular:h18
-  endif
-  if has('gui_macvim')
+    set guifont=Monaco:h15
     set transparency=5
+  else if has('win32')
+    set guifont=Consolas:h10
   endif
 else
   "set term=builtin_ansi
