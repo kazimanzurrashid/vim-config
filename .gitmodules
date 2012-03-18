@@ -114,3 +114,11 @@
   path = bundle/vividchalk
   url = http://github.com/tpope/vim-vividchalk.git
   ignore = dirty
+[submodule "bundle/less"]
+  path = bundle/less
+  url = http://github.com/groenewege/vim-less.git
+  ignore = dirty
+[submodule "bundle/easymotion"]
+  path = bundle/easymotion
+  url = http://github.com/Lokaltog/vim-easymotion.git
+  ignore = dirty

@@ -61,6 +61,12 @@ set title
 
 filetype plugin indent on
 
+if exists('+colorcolumn')
+  set colorcolumn=80
+else
+  au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+endif
+
 if &t_Co > 2 || has('gui_running')
   set hlsearch
 endif
@@ -76,10 +82,10 @@ if has('statusline')
 endif
 
 if has('gui_running')
+  set columns=120
   set guioptions-=T
   set guioptions-=L
   set guioptions-=r
-  set columns=120
   set lines=40
   if has('gui_macvim')
     set guifont=Monaco:h15
