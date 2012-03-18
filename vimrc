@@ -19,6 +19,7 @@ set ignorecase
 if has('mouse')
   set mouse=a
 endif
+set listchars=tab:▸\ ,eol:¬
 set nobackup
 set noswapfile
 set nowrap
@@ -101,7 +102,8 @@ if has('autocmd')
   autocmd BufEnter * cd %:p:h
 endif
 
+nmap ,nt :NERDTreeToggle
+
 let NERDTreeShowHidden=1
 let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
-
-nmap ,nt :NERDTreeToggle
+let g:EasyMotion_leader_key = '<Leader>'

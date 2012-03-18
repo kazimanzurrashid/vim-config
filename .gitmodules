@@ -122,3 +122,7 @@
   path = bundle/easymotion
   url = http://github.com/Lokaltog/vim-easymotion.git
   ignore = dirty
+[submodule "bundle/stylus"]
+  path = bundle/stylus
+  url = http://github.com/wavded/vim-stylus.git
+  ignore = dirty
