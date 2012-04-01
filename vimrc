@@ -107,3 +107,10 @@ nmap ,nt :NERDTreeToggle
 let NERDTreeShowHidden=1
 let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
 let g:EasyMotion_leader_key = '<Leader>'
+
+if exists(":Tabularize")
+  nmap <Leader>t= :Tabularize /=<CR>
+  vmap <Leader>t= :Tabularize /=<CR>
+  nmap <Leader>t: :Tabularize /:\zs<CR>
+  vmap <Leader>t: :Tabularize /:\zs<CR>
+endif
