@@ -114,3 +114,9 @@ if exists(":Tabularize")
   nmap <Leader>t: :Tabularize /:\zs<CR>
   vmap <Leader>t: :Tabularize /:\zs<CR>
 endif
+
+let g:user_zen_settings = {
+\  'indentation' : '  ',
+\}
+
+let g:use_zen_complete_tag = 1

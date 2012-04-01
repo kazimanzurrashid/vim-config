@@ -126,3 +126,7 @@
   path = bundle/stylus
   url = http://github.com/wavded/vim-stylus.git
   ignore = dirty
+[submodule "bundle/html5"]
+  path = bundle/html5
+  url = http://github.com/othree/html5.vim.git
+  ignore = dirty
