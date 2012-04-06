@@ -74,10 +74,6 @@
   path = bundle/javascript
   url = http://github.com/pangloss/vim-javascript.git
   ignore = dirty
-[submodule "bundle/Zenburn"]
-  path = bundle/Zenburn
-  url = http://github.com/jnurmine/Zenburn.git
-  ignore = dirty
 [submodule "bundle/solarized"]
   path = bundle/solarized
   url = http://github.com/altercation/vim-colors-solarized.git
@@ -98,10 +94,6 @@
   path = bundle/tmux
   url = http://github.com/tsaleh/vim-tmux.git
   ignore = dirty
-[submodule "bundle/ruby-debugger"]
-  path = bundle/ruby-debugger
-  url = http://github.com/astashov/vim-ruby-debugger.git
-  ignore = dirty
 [submodule "bundle/matchit"]
   path = bundle/matchit
   url = http://github.com/tsaleh/vim-matchit.git
@@ -109,10 +101,6 @@
 [submodule "bundle/gist"]
   path = bundle/gist
   url = http://github.com/mattn/gist-vim.git
-  ignore = dirty
-[submodule "bundle/vividchalk"]
-  path = bundle/vividchalk
-  url = http://github.com/tpope/vim-vividchalk.git
   ignore = dirty
 [submodule "bundle/less"]
   path = bundle/less
@@ -139,5 +127,18 @@
   url = http://github.com/Lokaltog/vim-powerline.git
   ignore = dirty
 [submodule "bundle/command-t"]
-	path = bundle/command-t
-	url = git://git.wincent.com/command-t.git
+  path = bundle/command-t
+  url = git://git.wincent.com/command-t.git
+  ignore = dirty
+[submodule "bundle/molokai"]
+  path = bundle/molokai
+  url = http://github.com/tomasr/molokai.git
+  ignore = dirty
+[submodule "bundle/mustang2"]
+  path = bundle/mustang2
+  url = https://github.com/vim-scripts/Mustang2.git
+  ignore = dirty
+[submodule "bundle/zenburn"]
+  path = bundle/zenburn
+  url = http://github.com/jnurmine/Zenburn.git
+  ignore = dirty

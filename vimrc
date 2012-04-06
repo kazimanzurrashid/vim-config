@@ -38,6 +38,7 @@ set wildmenu
 set wildmode=longest,list
 
 if has('gui_running')
+  set cursorline
   set background=dark
   colorscheme solarized
   let g:solarized_termtrans=1
@@ -45,19 +46,17 @@ if has('gui_running')
   let g:solarized_contrast='high'
   let g:solarized_visibility='high'
 else
-  colorscheme zenburn
-  let g:zenburn_high_Contrast=1
+  colorscheme mustang
+  " let g:zenburn_high_Contrast=1
+  " colorscheme zenburn
 endif
 
 set cmdheight=2
-set cursorline
-set listchars=tab:▸\ ,eol:¬
 set number
 set ruler
 set showcmd
 set showmatch
 set list
-set listchars=tab:,.,trail:.,extends:#,nbsp:.
 set title
 
 filetype plugin indent on
@@ -66,10 +65,6 @@ if exists('+colorcolumn')
   set colorcolumn=80
 else
   au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
-endif
-
-if &t_Co > 2 || has('gui_running')
-  set hlsearch
 endif
 
 if has('statusline')
@@ -94,25 +89,22 @@ if has('gui_running')
   elseif has('win64') || has('win32')
     set guifont=Consolas:h10
   endif
-else
-  "set term=builtin_ansi
 endif
 
 if has('autocmd')
   autocmd BufEnter * cd %:p:h
 endif
 
-nmap ,nt :NERDTreeToggle
-
 let NERDTreeShowHidden=1
+nmap <Leader>nt :NERDTreeToggle
+
 let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
-let g:EasyMotion_leader_key = '<Leader>'
 
 if exists(":Tabularize")
-  nmap <Leader>t= :Tabularize /=<CR>
-  vmap <Leader>t= :Tabularize /=<CR>
-  nmap <Leader>t: :Tabularize /:\zs<CR>
-  vmap <Leader>t: :Tabularize /:\zs<CR>
+  nmap <Leader>a= :Tabularize /=<CR>
+  vmap <Leader>a= :Tabularize /=<CR>
+  nmap <Leader>a: :Tabularize /:\zs<CR>
+  vmap <Leader>a: :Tabularize /:\zs<CR>
 endif
 
 let g:user_zen_settings = {
