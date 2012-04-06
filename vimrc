@@ -1,5 +1,7 @@
 set nocompatible
 
+let &t_Co=256
+
 call pathogen#infect()
 call pathogen#helptags()
 
@@ -46,9 +48,7 @@ if has('gui_running')
   let g:solarized_contrast='high'
   let g:solarized_visibility='high'
 else
-  colorscheme mustang
-  " let g:zenburn_high_Contrast=1
-  " colorscheme zenburn
+  colorscheme Mustang
 endif
 
 set cmdheight=2
