@@ -11,13 +11,13 @@ syntax enable
 set autoindent
 set autoread
 set backspace=indent,eol,start
-set bsdir=buffer
 set expandtab
 set foldenable
 set hidden
-set history=64
+set history=1024
 set incsearch
-set ignorecase
+set ignorecase 
+" Copy text to use outside
 if has('mouse')
   set mouse=a
 endif
@@ -36,8 +36,7 @@ set sps=best,10
 set softtabstop=2
 set tabstop=2
 set viewoptions=folds,options,cursor,unix,slash
-set wildmenu
-set wildmode=longest,list
+set winwidth=79
 
 if has('gui_running')
   set cursorline
@@ -53,11 +52,16 @@ endif
 
 set cmdheight=2
 set number
+set numberwidth=5
 set ruler
 set showcmd
 set showmatch
-set list
+set switchbuf=useopen
+set nolist
 set title
+set wildmenu
+set wildmode=longest,list
+set wildignore+=.git,.jhw-cache,tmp/*
 
 filetype plugin indent on
 
@@ -91,14 +95,24 @@ if has('gui_running')
   endif
 endif
 
+let mapleader=','
+
+" Ignore arrow keys
+map <Left>  :echo 'arrow keys are not allowed, you dum!'<cr>
+map <Right> :echo 'arrow keys are not allowed, you stupid!'<cr>
+map <Up>    :echo 'arrow keys are not allowed, you moron!'<cr>
+map <Down>  :echo 'arrow keys are not allowed, you retarted!'<cr>
+
+" Clear search buffer when enter is pressed
+:nnoremap <CR> :nohlsearch<cr>
+
 if has('autocmd')
-  autocmd BufEnter * cd %:p:h
+  " Apply the setting changes immediately 
+  autocmd BufWritePost .vimrc source $MYVIMRC
 endif
 
 let NERDTreeShowHidden=1
 nmap <Leader>nt :NERDTreeToggle
-
-let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
 
 if exists(":Tabularize")
   nmap <Leader>a= :Tabularize /=<CR>
