@@ -89,7 +89,7 @@ if has('gui_running')
   set guioptions-=r
   set lines=40
   if has('gui_macvim')
-    set guifont=Monaco:h15
+    set guifont=Monaco:h16
     set transparency=5
   elseif has('win64') || has('win32')
     set guifont=Consolas:h10
@@ -109,6 +109,7 @@ map <Down>  :echo 'arrow keys are not allowed, you retarted!'<cr>
 :nnoremap <CR> :nohlsearch<cr>
 
 if has('autocmd')
+  autocmd BufNewFile,BufRead *.jbuilder set filetype=rb
   " Apply the setting immediately 
   autocmd BufWritePost .vimrc source $MYVIMRC
 endif
