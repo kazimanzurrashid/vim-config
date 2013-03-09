@@ -138,8 +138,3 @@
   path = bundle/zenburn
   url = git://github.com/jnurmine/Zenburn.git
   ignore = dirty
-[submodule "bundle/slim"]
-	path = bundle/slim
-	url = git://github.com/slim-template/vim-slim.git
-  ignore = dirty
-
