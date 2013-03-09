@@ -138,3 +138,6 @@
   path = bundle/zenburn
   url = git://github.com/jnurmine/Zenburn.git
   ignore = dirty
+[submodule "bundle/jade"]
+	path = bundle/jade
+	url = git://github.com/digitaltoad/vim-jade.git
