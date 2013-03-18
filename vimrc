@@ -41,14 +41,6 @@ set winwidth=79
 colorscheme Tomorrow-Night
 if has('gui_running')
   set cursorline
-  " set background=dark
-  " colorscheme solarized
-  " let g:solarized_termtrans=1
-  " let g:solarized_termcolors=256
-  " let g:solarized_contrast='high'
-  " let g:solarized_visibility='high'
-else
-  " colorscheme Mustang
 endif
 
 set cmdheight=2
@@ -109,7 +101,6 @@ map <Down>  :echo 'arrow keys are not allowed, you retarted!'<cr>
 :nnoremap <CR> :nohlsearch<cr>
 
 if has('autocmd')
-  autocmd BufNewFile,BufRead *.jbuilder set filetype=rb
   " Apply the setting immediately 
   autocmd BufWritePost .vimrc source $MYVIMRC
 endif
