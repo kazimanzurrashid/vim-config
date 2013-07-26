@@ -150,3 +150,6 @@
 	path = bundle/pandoc
 	url = git://github.com/vim-pandoc/vim-pandoc.git
   ignore = dirty
+[submodule "bundle/elixir"]
+	path = bundle/elixir
+	url = git://github.com/elixir-lang/vim-elixir.git
