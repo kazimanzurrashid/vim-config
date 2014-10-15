@@ -86,10 +86,6 @@
   path = bundle/tmux
   url = git://github.com/tsaleh/vim-tmux.git
   ignore = dirty
-[submodule "bundle/matchit"]
-  path = bundle/matchit
-  url = git://github.com/tsaleh/vim-matchit.git
-  ignore = dirty
 [submodule "bundle/gist"]
   path = bundle/gist
   url = git://github.com/mattn/gist-vim.git
@@ -118,10 +114,6 @@
   path = bundle/powerline
   url = git://github.com/Lokaltog/vim-powerline.git
   ignore = dirty
-[submodule "bundle/command-t"]
-  path = bundle/command-t
-  url = git://git.wincent.com/command-t.git
-  ignore = dirty
 [submodule "bundle/molokai"]
   path = bundle/molokai
   url = git://github.com/tomasr/molokai.git
@@ -141,10 +133,6 @@
 [submodule "bundle/slim"]
 	path = bundle/slim
 	url = git://github.com/slim-template/vim-slim.git
-  ignore = dirty
-[submodule "bundle/pandoc"]
-	path = bundle/pandoc
-	url = git://github.com/vim-pandoc/vim-pandoc.git
   ignore = dirty
 [submodule "bundle/elixir"]
 	path = bundle/elixir
