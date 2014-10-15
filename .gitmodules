@@ -155,3 +155,6 @@
 [submodule "bundle/vim-csharp"]
 	path = bundle/vim-csharp
 	url = git://github.com/OrangeT/vim-csharp.git
+[submodule "bundle/vim-dispatch"]
+	path = bundle/vim-dispatch
+	url = http://github.com/tpope/vim-dispatch.git
