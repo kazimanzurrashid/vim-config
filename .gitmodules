@@ -167,3 +167,6 @@
 [submodule "bundle/esnext"]
 	path = bundle/esnext
 	url = https://github.com/othree/es.next.syntax.vim.git
+[submodule "bundle/typescript"]
+	path = bundle/typescript
+	url = https://github.com/leafgarland/typescript-vim.git
