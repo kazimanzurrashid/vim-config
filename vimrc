@@ -1,9 +1,55 @@
 set nocompatible
 
-let &t_Co=256
+call plug#begin('~/.vim/plugged')
+  Plug 'dracula/vim'
+  Plug 'scrooloose/nerdtree'
+  Plug 'tpope/gem-ctags'
+  Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-cucumber'
+  Plug 'tpope/vim-haml'
+  Plug 'tpope/vim-markdown'
+  Plug 'vim-scripts/taglist.vim'
+  Plug 'juvenn/mustache.vim'
+  Plug 'kchmck/vim-coffee-script'
+  Plug 'derekwyatt/vim-scala'
+  Plug 'vim-ruby/vim-ruby'
+  Plug 'Lokaltog/vim-easymotion'
+  Plug 'wavded/vim-stylus'
+  Plug 'groenewege/vim-less'
+  Plug 'ervandew/supertab'
+  Plug 'digitaltoad/vim-jade'
+  Plug 'digitaltoad/vim-pug'
+  Plug 'slim-template/vim-slim'
+  Plug 'elixir-lang/vim-elixir'
+  Plug 'mattn/emmet-vim'
+  Plug 'nono/vim-handlebars'
+  Plug 'pangloss/vim-javascript'
+  Plug 'mattn/emmet-vim'
+  Plug 'othree/html5.vim'
+  Plug 'othree/yajs.vim'
+  Plug 'othree/es.next.syntax.vim'
+  Plug 'leafgarland/typescript-vim'
+  Plug 'editorconfig/editorconfig-vim'
+  Plug 'kien/ctrlp.vim'
+  Plug 'fatih/vim-go'
+  Plug 'mxw/vim-jsx'
+  Plug 'moll/vim-node'
+  Plug 'ekalinin/dockerfile.vim'
+  Plug 'burnettk/vim-angular'
+  Plug 'chrisbra/csv.vim'
+  Plug 'wting/rust.vim'
+  Plug 'cespare/vim-toml'
+  Plug 'cespare/vim-toml'
+  Plug 'evanmiller/nginx-vim-syntax'
+  Plug 'stephpy/vim-yaml'
+  Plug 'oranget/vim-csharp'
+  Plug 'rhysd/vim-crystal'
+  Plug 'uarun/vim-protobuf'
+  Plug 'bling/vim-airline'
+  Plug 'airblade/vim-gitgutter'
+call plug#end()
 
-call pathogen#infect()
-call pathogen#helptags()
+let &t_Co=256
 
 scriptencoding utf-8
 syntax enable
@@ -38,7 +84,7 @@ set tabstop=2
 set viewoptions=folds,options,cursor,unix,slash
 set winwidth=79
 
-colorscheme Tomorrow-Night
+colorscheme Dracula
 if has('gui_running')
   set cursorline
 endif
@@ -62,16 +108,6 @@ if exists('+colorcolumn')
   set colorcolumn=80
 else
   au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
-endif
-
-if has('statusline')
-  set laststatus=2
-  set statusline=%<%f\
-  set statusline+=%w%h%m%r
-  set statusline+=%{fugitive#statusline()}
-  set statusline+=\ [%{&ff}/%Y]
-  set statusline+=\ [%{getcwd()}]
-  set statusline+=%=%-14.(%l,%c%V%)\ %p%%
 endif
 
 if has('gui_running')
@@ -109,10 +145,3 @@ let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
 
 let NERDTreeShowHidden=1
 nmap <Leader>nt :NERDTreeToggle
-
-if exists(":Tabularize")
-  nmap <Leader>a= :Tabularize /=<CR>
-  vmap <Leader>a= :Tabularize /=<CR>
-  nmap <Leader>a: :Tabularize /:\zs<CR>
-  vmap <Leader>a: :Tabularize /:\zs<CR>
-endif
